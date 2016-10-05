@@ -1,11 +1,32 @@
 {
-  "name": "metisfw/vagrant-tester",
-  "config": {
-    "vendor-dir": "libs"
+  "name": "vagrant-tester",
+  "type": "library",
+  "description": "Tools for testing Vagrant VMs by Nette Tester",
+  "keywords": ["cagrant"],
+  "homepage": "https://github.com/MetisFW/VagrantTester",
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "authors": [
+    {
+      "name": "GrowJOB s.r.o",
+      "email": "dev@growjob.com"
+    }
+  ],
+  "support": {
+    "email": "dev@growjob.com",
+    "issues": "https://github.com/MetisFW/VagrantTester/issues"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "require": {
+    "php": ">=5.3.0"
+  },
   "require-dev": {
     "nette/tester": "^1.5.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "MetisFW\\VagrantTestet\\": "src/"
+    }
+  },
+  "archive": {
+    "exclude": ["tests"]
   }
 }
