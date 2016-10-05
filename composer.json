@@ -1,5 +1,5 @@
 {
-  "name": "vagrant-tester",
+  "name": "metisfw/vagrant-tester",
   "type": "library",
   "description": "Tools for testing Vagrant VMs by Nette Tester",
   "keywords": ["cagrant"],
