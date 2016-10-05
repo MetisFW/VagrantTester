@@ -1,4 +1,4 @@
-# MetisFW/PayPal
+# MetisFW/VagrantTester
 
 ## Setup
 
