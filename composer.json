@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-0": {
-      "MetisFW\\VagrantTestet\\": "src/"
+      "MetisFW\\VagrantTester\\": "src/"
     }
   },
   "archive": {
