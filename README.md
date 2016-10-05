@@ -1,7 +1,7 @@
 # VagrantTester
 
-[![Downloads this Month](https://img.shields.io/packagist/dm/metisfw/paypal.svg)](https://packagist.org/packages/metisfw/paypal)
-[![Latest stable](https://img.shields.io/packagist/v/metisfw/paypal.svg)](https://packagist.org/packages/metisfw/paypal)
+[![Downloads this Month](https://img.shields.io/packagist/dm/metisfw/vagrant-tester.svg)](https://packagist.org/packages/metisfw/vagrant-tester)
+[![Latest stable](https://img.shields.io/packagist/v/metisfw/vagrant-tester.svg)](https://packagist.org/packages/metisfw/vagrant-tester)
 
 Tools for testing Vagrant VMs by Nette Tester
 
