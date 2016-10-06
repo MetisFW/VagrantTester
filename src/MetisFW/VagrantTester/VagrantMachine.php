@@ -2,7 +2,6 @@
 
 namespace MetisFW\VagrantTester;
 
-use Tester\Assert;
 use Tester\Environment;
 
 class VagrantMachine {
@@ -48,7 +47,7 @@ class VagrantMachine {
     return new VagrantMachine($machine);
   }
 
-  private function out($text) {
+  protected function out($text) {
     $output = self::$output;
     $text = "$text\n";
     if($output === null) {
@@ -58,7 +57,7 @@ class VagrantMachine {
     }
   }
 
-  private function getSshConfig()
+  public function getSshConfig()
   {
     $output = array();
     $status = null;
@@ -82,7 +81,7 @@ class VagrantMachine {
     return $filePath;
   }
 
-  function run($command, $expectedStatus = 0)
+  public function run($command, $expectedStatus = 0)
   {
     list($status, $outputStr) = $this->executeCommand($command);
     if ($status != $expectedStatus) {
@@ -91,16 +90,16 @@ class VagrantMachine {
     return $outputStr;
   }
 
-  function file($path) {
+  public function file($path) {
     return $this->run("cat " . escapeshellarg($path));
   }
 
-  function fileExists($path) {
+  public function fileExists($path) {
     list($status, $outputStr) = $this->executeCommand("test -f " . escapeshellarg($path));
     return ($status == 0);
   }
 
-  private function executeCommand($command) {
+  protected function executeCommand($command) {
     $targetCommand = "sudo -sE " . $command;
     $fullCommand = "cat {$this->ssh} | ssh -q -t -t -F/dev/stdin -M {$this->machine} " . escapeshellarg($targetCommand) . " 2>&1";
     $this->out(">>[{$this->machine}]>> $command ($fullCommand)");
